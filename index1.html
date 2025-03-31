@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capinga Transportes</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  
+  <header>
+    <div class="logo">Capinga Transportes</div>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Sobre Nós</a></li>
+        <li><a href="#">Compra de Bilhetes</a></li>
+        <li><a href="#">Destinos</a></li>
+        <li><a href="#">Horários</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+    
+    <label for="darkModeToggle" id="darkModeLabel">Modo Escuro</label>
+    <input type="checkbox" id="darkModeToggle">
+  </header>
+
+ 
+  <main class="grid-container">
+    <section class="intro">
+      <h1 class="typing-effect">Compre seus bilhetes para qualquer destino em Moçambique!</h1>
+      <p>Viaje com segurança e conforto por todo Moçambique. Compre seus bilhetes de forma fácil e rápida.</p>
+    </section>
+
+    <section class="ticket-purchase">
+      <h2>Compre seu Bilhete</h2>
+      <form action="#" method="POST">
+        <label for="nome">Nome do Passageiro:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+        <label for="origem">Origem:</label>
+        <select id="origem" name="origem" required>
+          <option value="maputo">Maputo</option>
+          <option value="beira">Beira</option>
+          <option value="nampula">Nampula</option>
+          <option value="Xai-xai">Xai-xai</option>
+          <option value="Tete">Tete</option>
+          <option value="Chimoio">Chimoio</option>
+          <option value="Pemba">Pemba</option>
+          
+
+        </select>
+
+        <label for="destino">Destino:</label>
+        <select id="destino" name="destino" required>
+            <option value="maputo">Maputo</option>
+            <option value="beira">Beira</option>
+            <option value="nampula">Nampula</option>
+            <option value="Xai-xai">Xai-xai</option>
+            <option value="Tete">Tete</option>
+            <option value="Chimoio">Chimoio</option>
+            <option value="Pemba">Pemba</option>
+        </select>
+
+        <label for="data">Data de Viagem:</label>
+        <input type="date" id="data" name="data" required>
+
+        <button type="submit">Comprar Bilhete</button>
+      </form>
+    </section>
+
+    <section class="destinos">
+      <h2>Destinos Populares</h2>
+      <ul>
+        <li><strong>Maputo</strong> - A capital de Moçambique.</li>
+        <li><strong>Beira</strong> - Segunda maior cidade de Moçambique.</li>
+        <li><strong>Nampula</strong> - Cidade histórica e vibrante.</li>
+        <li><strong>Xai-xai</strong> - Destino ecoturístico e de aventura.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Capinga Transportes.</p>
+  </footer>
+
+</body>
+</html>
