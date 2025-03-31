@@ -1,0 +1,230 @@
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4; /* Fundo claro padrão */
+    color: #2c3e50;  /* Texto escuro para o modo claro */
+    line-height: 1.6;
+    padding: 0 20px;
+  }
+  
+  h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #2980b9; /* Título em azul para destaque */
+  }
+  
+  /* Animação de Digitação */
+  .typing-effect {
+    display: inline-block;
+    border-right: 3px solid #3498db;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  /* Estilos da Barra de Navegação com Flexbox */
+  header {
+    background-color: #34495e;  /* Azul escuro para o modo claro */
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+  }
+  
+  header .logo {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    color: #ecf0f1;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    margin: 0 20px;
+  }
+  
+  nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: #3498db;  /* Azul mais vibrante ao passar o mouse */
+    color: white;
+    transform: scale(1.1);  /* Efeito de ampliação suave */
+  }
+  
+  /* Estilos para o Formulário */
+  form input, form select, form button {
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  form input:focus, form select:focus {
+    border-color: #2980b9; /* Borda azul ao focar nos campos */
+  }
+  
+  form button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  form button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px); /
+  }
+  
+  section {
+    margin: 50px 0;
+    padding: 40px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Rodapé */
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #34495e;
+    color: white;
+    font-size: 16px;
+  }
+  
+  /* Modo Escuro */
+  #darkModeToggle {
+    display: none; /* Esconde o checkbox */
+  }
+  
+  #darkModeToggle:checked ~ body {
+    background-color: #121212; /* Fundo escuro */
+    color: #ecf0f1; /* Texto claro */
+  }
+  
+  #darkModeToggle:checked ~ body header {
+    background-color: #2c3e50; /* Cabeçalho escuro */
+  }
+  
+  #darkModeToggle:checked ~ body footer {
+    background-color: #2c3e50; /* Rodapé escuro */
+  }
+  
+  #darkModeToggle:checked ~ body .testimonial, 
+  #darkModeToggle:checked ~ body .destinos,
+  #darkModeToggle:checked ~ body section {
+    background-color: #1f1f1f;  /* Seções com fundo escuro */
+    color: #ecf0f1; /* Texto claro */
+  }
+  
+  #darkModeLabel {
+    cursor: pointer;
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #darkModeLabel:hover {
+    background-color: #3498db;
+  }
+  
+  /* Grid Layout para conteúdo principal */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px 0;
+  }
+  
+  .grid-container section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .destinos ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .destinos ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Media Queries para Ajuste em Telas Menores */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;  /* Uma coluna para telas pequenas */
+    }
+  
+    nav ul {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 24px;
+    }
+  
+    header {
+      padding: 10px;
+    }
+  
+    form button {
+      width: 100%;  /* Botão ocupar toda a largura */
+    }
+  }
+  
